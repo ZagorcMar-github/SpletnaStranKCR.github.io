@@ -1,138 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Aplikacija s flutter</title>
-    <meta name="description" content="Portfolio Template for Developer" />
 
-    <link rel="stylesheet" href="stilKcr.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Aplikacija s flutter</title>
+  <meta name="description" content="Portfolio Template for Developer" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header class="header">
-      <div class="header__content">
-        <div class="header__logo-container">
-          
-          <span class="header__logo-sub">Martin Zagorc</span>
+  <link rel="stylesheet" href="stilKcr.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+    rel="stylesheet" />
+  <script>
+    var slideIndex = 1;
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      // var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      //for (i = 0; i < dots.length; i++) {
+      //dots[i].className = dots[i].className.replace(" active", "");
+      //}
+      slides[slideIndex - 1].style.display = "block";
+      // dots[slideIndex ].className += " active";
+    }
+
+    //showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+      try {
+        // JavaScript code for slideshow
+        showSlides(slideIndex += n);
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+
+  </script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__content">
+      <div class="header__logo-container">
+
+        <span class="header__logo-sub">Martin Zagorc</span>
+      </div>
+      <div class="header__main">
+        <ul class="header__links">
+          <li class="header__link-wrapper">
+            <a href="index.html" class="header__link"> Domov </a>
+          </li>
+          <li class="header__link-wrapper">
+            <a href="wireframe.html" class="header__link">Wireframe </a>
+          </li>
+          <li class="header__link-wrapper">
+            <a href="TehnicnaDokumentacija.html" class="header__link">Tehnična Dokumentacija </a>
+          </li>
+
+        </ul>
+        <div class="header__main-ham-menu-cont">
+          <img src="./assets/hamMenu.svg" alt="hamburger menu" class="header__main-ham-menu" />
+          <img src="./assets/hamMenu.svg" alt="hamburger menu close"
+            class="header__main-ham-menu-close d-none" />
         </div>
-        <div class="header__main">
-          <ul class="header__links">
-            <li class="header__link-wrapper">
-              <a href="index.html" class="header__link"> Domov </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="wireframe.html" class="header__link">Wireframe </a>
-            </li>
-            
-          </ul>
-          <div class="header__main-ham-menu-cont">
-            <img
-              src="./assets/svg/ham-menu.svg"
-              alt="hamburger menu"
-              class="header__main-ham-menu"
-            />
-            <img
-              src="./assets/svg/ham-menu-close.svg"
-              alt="hamburger menu close"
-              class="header__main-ham-menu-close d-none"
-            />
+      </div>
+    </div>
+    <div class="header__sm-menu">
+      <div class="header__sm-menu-content">
+        <ul class="header__sm-menu-links">
+          <li class="header__sm-menu-link">
+            <a href="index.html"> Domov </a>
+          </li>
+
+          <li class="header__sm-menu-link">
+            <a href="wireframe.html"> Wireframe </a>
+          </li>
+          <li class="header__sm-menu-link">
+            <a href="TehnicnaDokumentacija.html">Tehnična Dokumentacija </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </header>
+  <section class="home-hero">
+    <div class="home-hero__content">
+      <h1 class="heading-primary">Zdravo, sem Martin Zagorc</h1>
+      <div class="home-hero__info">
+        <p class="text-primary">
+
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis
+          tempora explicabo quae quod deserunt eius sapiente solutions for
+          complex problems
+        </p>
+      </div>
+      <div class="icon">
+        <img class="spList" src="./assets/4543179.png" alt="shopping list">
+      </div>
+    </div>
+
+  </section>
+  <section id="about" class="about sec-pad">
+    <div class="main-container">
+      <h2 class="heading heading-sec heading-sec__mb-med">
+        <span class="heading-sec__main">O meni</span>
+        <span class="heading-sec__sub">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis
+          tempora explicabo quae quod deserunt eius sapiente
+        </span>
+      </h2>
+      <div class="about__content">
+        <div class="about__content-main">
+          <h3 class="about__content-title">Opis pojekta</h3>
+          <div class="about__content-details">
+            <p class="about__content-details-para">
+              Lotil sem se izdelat mobilno aplikacijo ki bo uporabniku pomagala pri izdelovanju nakupuovalnega lista
+              temeljni cilj je, da ob vnosu izdelka (predvsem hrane) primerja cene pri slovenskih ponudnikih
+              trentno so v bazi izdelki spletne trgovine spar in tuš. Pri izdelavi sem uporabil flutter za sam izgled
+              aplikacije in logiko ospredja. node.js
+              kot jezik na strani strežnika in podatkovno bazo mongoDb
+            </p>
           </div>
-        </div>
-      </div>
-      <div class="header__sm-menu">
-        <div class="header__sm-menu-content">
-          <ul class="header__sm-menu-links">
-            <li class="header__sm-menu-link">
-              <a href="index.html"> Domov </a>
-            </li>
 
-            <li class="header__sm-menu-link">
-              <a href="wireframe.html"> Wireframe </a>
-            </li>
-          </ul>
         </div>
-      </div>
-    </header>
-    <section class="home-hero">
-      <div class="home-hero__content">
-        <h1 class="heading-primary">Zdravo, sem Martin Zagorc</h1>
-        <div class="home-hero__info">
-          <p class="text-primary">
+        <div class="about__content-skills">
+          <h3 class="about__content-title">Izgled moje aplikacije</h3>
+          <div class="skills">
 
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis
-            tempora explicabo quae quod deserunt eius sapiente solutions for
-            complex problems
-          </p>
-        </div>
-        <div class="icon">
-          <img class="spList" src="./assets/4543179.png" alt="shopping list">
-        </div>
-      </div>
-      
-    </section>
-    <section id="about" class="about sec-pad">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-med">
-          <span class="heading-sec__main">O meni</span>
-          <span class="heading-sec__sub">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic facilis
-            tempora explicabo quae quod deserunt eius sapiente
-          </span>
-        </h2>
-        <div class="about__content">
-          <div class="about__content-main">
-            <h3 class="about__content-title">Opis pojekta</h3>
-            <div class="about__content-details">
-              <p class="about__content-details-para">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam itaque mollitia, amet corporis hic aute
-                m similique tempore officiis explicabo rem cupiditate! Error atque temporibus quae, eum aspernatur numquam optio fugit?
-              </p>
+            <div class="slideshow-container">
+              <div class="mySlides fade">
+                <img class="slideshowIMG" src="./assets/LoginPNG.PNG" onload="showSlides(slideIndex)">
+              </div>
+
+              <div class="mySlides fade">
+                <img class="slideshowIMG" src="./assets/MainPage.PNG" onload="showSlides(slideIndex)">
+              </div>
+
+              <div class="mySlides fade">
+                <img class="slideshowIMG" src="./assets/MeatOfApp.PNG" onload="showSlides(slideIndex)">
+              </div>
+
+              <div class="mySlides fade">
+                <img class="slideshowIMG" src="./assets/Register.PNG" onload="showSlides(slideIndex)">
+              </div>
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
             
           </div>
-          <div class="about__content-skills">
-            <h3 class="about__content-title">Izgled moje aplikacije</h3>
-            <div class="skills">
-              <img src="./assets/loginPage.png" alt="My androd app" width="300">
-            </div>
-          </div>
         </div>
       </div>
-    </section>
-    <section id="opisProjekta" class="opisProjekta">
-        <div class="contejnerOpisa">
-         
-            <span class="about__content-details-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ratione nisi accusanti
-                um alias natus, minima optio nostrum illo nobis. Corrupti quibusdam in debitis, dolore dicta a ullam. Esse, consequuntur molestias.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, asperiores nihil nam iste alias sint ut deserunt laudantium ipsum a
-                b at sapiente, quae molestias assumenda quis vel voluptate molestiae. Voluptate?
-                </span>
-           
-        </div>
-      </section>
-    
+    </div>
+  </section>
 
-    
+  <section id="opisProjekta" class="opisProjekta">
 
-        <!-- If you give me some credit or shoutout here by linking to my website, then it will be a big thing for me and will help me a lot :) -->
-        <div class="main-footer__lower">
-          
-        </div>
-      
-    </footer>
+    <div class="contejnerOpisa">
+      <h2 class="heading heading-sec heading-sec__mb-med">
+        <span class="heading-sec__main">NAMEN</span></h2>
+      <span class="about__content-details-para">Moja aplikacija je predvsem zasnovana za študente, ki želijo pri nakupovanju živil prihraniti čim več.
+         glavni cilj je zagotoviti priročno rešitev za tiste, ki imajo omejen prihodek.
+        Vendar pa lahko aplikacijo uporablja kdorkoli, ki želi prihraniti pri nakupovanju živil.
+         Ne glede na to, ali ste zaposleni strokovnjak ali družina z omejenim proračunom, moja aplikacija ponuja različne funkcije in ugodnosti,
+          ki vam lahko pomagajo prihraniti denar in poenostaviti vaše nakupovalno izkušnjo.
+         Torej, če ste študent, ki želi od majhnega prihodke istržiti čim več, ali preprosto nekdo, ki želi prihraniti nekaj dodatnih evrov pri nakupu živil, 
+      </span>
 
-    
-  </body>
+    </div>
+  </section>
+
+  
+</body>
+
 </html>
-    
-    
-    
 
+
+<!--Moja aplikacija je predvsem zasnovana za študente, ki želijo pri nakupovanju živil prihraniti čim več.
+         glavni cilj je zagotoviti priročno rešitev za tiste, ki imajo omejen prihodek.
+        Vendar pa lahko aplikacijo uporablja kdorkoli, ki želi prihraniti pri nakupovanju živil.
+         Ne glede na to, ali ste zaposleni strokovnjak ali družina z omejenim proračunom, moja aplikacija ponuja različne funkcije in ugodnosti,
+          ki vam lahko pomagajo prihraniti denar in poenostaviti vaše nakupovalno izkušnjo.
+         Torej, če ste študent, ki želi od majhnega prihodke istržiti čim več, ali preprosto nekdo, ki želi prihraniti nekaj dodatnih evrov pri nakupu živil, -->
